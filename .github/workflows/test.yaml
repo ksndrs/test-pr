@@ -24,6 +24,9 @@ jobs:
       - name: ls
         run: |
           ls -la
+          echo $PATH
+          which mkdir
+          which read
       # To create advice for a file or directory, determine the filename by:
       # $ echo "$filename" | sed -E 's/[^[:alnum:]]+/_/g'
       #

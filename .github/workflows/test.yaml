@@ -23,6 +23,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: ls
         run: |
+          git diff --name-only "${GITHUB_BASE_SHA}" "${GITHUB_PR_SHA}"
           ls -la
       # To create advice for a file or directory, determine the filename by:
       # $ echo "$filename" | sed -E 's/[^[:alnum:]]+/_/g'

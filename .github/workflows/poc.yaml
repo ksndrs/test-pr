@@ -1,0 +1,15 @@
+name: Create and Commit Next-Build Docker Image
+
+on:
+  pull_request:
+  
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "; echo 'test'; #" > tag.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: tag
+          path: ./tag.txt
+        

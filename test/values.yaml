@@ -1,0 +1,3 @@
+deployment:
+  container:
+    image: some-old-image:tag

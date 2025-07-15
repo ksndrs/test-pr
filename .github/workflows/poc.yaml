@@ -7,7 +7,7 @@ jobs:
   poc:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "; echo 'test'; #" > tag.txt
+      - run: echo "; echo 'test'; \#" > tag.txt
       - uses: actions/upload-artifact@v4
         with:
           name: tag
